@@ -490,10 +490,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Volcano Clone + Silicone Sock
-  #define DEFAULT_Kp 16.73
-  #define DEFAULT_Ki 1.00
-  #define DEFAULT_Kd 69.79
+  // E3D Volcano: M106 + M303 E-0 S230 C8
+  #define DEFAULT_Kp 28.19
+  #define DEFAULT_Ki 2.67
+  #define DEFAULT_Kd 74.38
 
 #endif // PIDTEMP
 
@@ -530,11 +530,15 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  #define DEFAULT_bedKp 228.07
-  #define DEFAULT_bedKi 44.19
-  #define DEFAULT_bedKd 784.72
+  // #define DEFAULT_bedKp 228.07
+  // #define DEFAULT_bedKi 44.19
+  // #define DEFAULT_bedKd 784.72
 
-  // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
+  // Anet A8 Heatbed (Ultrabase): M303 E-1 S60 C8
+  #define DEFAULT_bedKp 157.91
+  #define DEFAULT_bedKi 25.04
+  #define DEFAULT_bedKd 663.89
+
 #endif // PIDTEMPBED
 
 #if EITHER(PIDTEMP, PIDTEMPBED)
